@@ -28,4 +28,6 @@ urlpatterns = [
     # Optional UI:
     path('api/schema/swagger-ui/', SpectacularSwaggerView.as_view(url_name='schema'), name='swagger-ui'),
 
+    path('blog/',include('apps.blog.urls',namespace='blog'),name='blog'),
+
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
